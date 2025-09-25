@@ -1,0 +1,137 @@
+[
+  {
+    "id": 1007,
+    "title": "Cannot Sync Calendar",
+    "description": "Customer reports that their calendar events are not syncing across devices.",
+    "customer": "Lucas Green",
+    "priority": "Medium",
+    "status": "Open",
+    "createdAt": "2024-02-01"
+  },
+  {
+    "id": 1008,
+    "title": "App Freezes on Startup",
+    "description": "Customer says the mobile app freezes immediately after launching on iOS 15.",
+    "customer": "Emma White",
+    "priority": "High",
+    "status": "In-Progress",
+    "createdAt": "2024-02-02"
+  },
+  {
+    "id": 1009,
+    "title": "Unable to Update Payment Method",
+    "description": "Customer cannot update their credit card information in the billing section.",
+    "customer": "Oliver Hall",
+    "priority": "High",
+    "status": "Open",
+    "createdAt": "2024-02-03"
+  },
+  {
+    "id": 1010,
+    "title": "Missing Order Confirmation Email",
+    "description": "Customer did not receive the confirmation email after placing an order.",
+    "customer": "Sophia King",
+    "priority": "Medium",
+    "status": "Open",
+    "createdAt": "2024-02-04"
+  },
+  {
+    "id": 1011,
+    "title": "Profile Picture Not Uploading",
+    "description": "Customer is unable to upload a new profile picture; the upload button does nothing.",
+    "customer": "Henry Scott",
+    "priority": "Low",
+    "status": "Open",
+    "createdAt": "2024-02-05"
+  },
+  {
+    "id": 1012,
+    "title": "App Crashes During Video Playback",
+    "description": "Customer reports that the app crashes whenever they try to play videos.",
+    "customer": "Isabella Young",
+    "priority": "High",
+    "status": "In-Progress",
+    "createdAt": "2024-02-06"
+  },
+  {
+    "id": 1013,
+    "title": "Cannot Redeem Promo Code",
+    "description": "Customer’s promo code is invalid even though it is active and not expired.",
+    "customer": "Mason Adams",
+    "priority": "Medium",
+    "status": "Open",
+    "createdAt": "2024-02-07"
+  },
+  {
+    "id": 1014,
+    "title": "Slow App Performance",
+    "description": "Customer reports the app is extremely slow on Android 12 devices.",
+    "customer": "Ava Baker",
+    "priority": "Low",
+    "status": "In-Progress",
+    "createdAt": "2024-02-08"
+  },
+  {
+    "id": 1015,
+    "title": "Refund Received Partially",
+    "description": "Customer received only half of the refund amount they were promised.",
+    "customer": "Ethan Nelson",
+    "priority": "Medium",
+    "status": "Open",
+    "createdAt": "2024-02-09"
+  },
+  {
+    "id": 1016,
+    "title": "Cannot Change Password",
+    "description": "Password change fails with an unknown error message.",
+    "customer": "Lily Carter",
+    "priority": "High",
+    "status": "Open",
+    "createdAt": "2024-02-10"
+  },
+  {
+    "id": 1017,
+    "title": "Duplicate Notifications",
+    "description": "Customer receives multiple notifications for the same event.",
+    "customer": "Jack Mitchell",
+    "priority": "Low",
+    "status": "In-Progress",
+    "createdAt": "2024-02-11"
+  },
+  {
+    "id": 1018,
+    "title": "Cannot Export Data",
+    "description": "Customer cannot export their report as CSV or PDF; export fails every time.",
+    "customer": "Chloe Roberts",
+    "priority": "Medium",
+    "status": "Open",
+    "createdAt": "2024-02-12"
+  },
+  {
+    "id": 1019,
+    "title": "App Notification Sound Not Working",
+    "description": "Customer reports that notification sounds are not playing on iPhone 14.",
+    "customer": "Benjamin Turner",
+    "priority": "Low",
+    "status": "In-Progress",
+    "createdAt": "2024-02-13"
+  },
+  {
+    "id": 1020,
+    "title": "Cannot Apply Discount",
+    "description": "Customer cannot apply discount on checkout, even though it’s valid.",
+    "customer": "Grace Phillips",
+    "priority": "Medium",
+    "status": "Open",
+    "createdAt": "2024-02-14"
+  },
+  {
+    "id": 1021,
+    "title": "Order Status Not Updating",
+    "description": "Customer’s order status remains ‘Processing’ even after shipping.",
+    "customer": "Daniel Campbell",
+    "priority": "High",
+    "status": "Open",
+    "createdAt": "2024-02-15"
+  }
+]
