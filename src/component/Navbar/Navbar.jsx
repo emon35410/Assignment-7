@@ -3,7 +3,7 @@ import React from 'react';
 const Navbar = () => {
     return (
         <div>
-            <div className="navbar bg-base-100 shadow-sm pr-7 ">
+            <div className="navbar bg-base-100 shadow-sm md:pr-5 ">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn  lg:hidden">
@@ -20,7 +20,7 @@ const Navbar = () => {
                             <li><a>Contact</a></li>
                         </ul>
                     </div>
-                    <a className="btn btn-ghost font-bold text-accent-content ml-4">CS — Ticket System</a>
+                    <a className="btn btn-ghost font-bold text-accent-content ml-4 md:text-2xl">CS — Ticket System</a>
                 </div>
 
                 <div className="navbar-end">

@@ -13,12 +13,12 @@ const Banner = () => {
                     backgroundPosition: 'center'
                 }}
             >
-                <div className='flex flex-col justify-center items-center text-white'>
+                <div className='flex flex-col justify-center items-center gap-1 text-white'>
                     <h3>In-Progress</h3>
-                    <h1>0</h1>
+                    <h1 className='font-semibold text-5xl'>0</h1>
                 </div>
             </div>
-            <div className=' w-full h-[150px] flex justify-center items-center   md:w-[508px] md:h-[250px] rounded-lg '
+            <div className=' w-full h-[150px] flex gap-1 justify-center items-center   md:w-[508px] md:h-[250px] rounded-lg '
              style={{
                     backgroundImage: `linear-gradient(90.00deg,#54cf68,#00827a), url('${bgImg2}')`,
                     backgroundSize: 'cover',
@@ -28,7 +28,7 @@ const Banner = () => {
             >
                 <div className='flex flex-col justify-center items-center text-white'>
                     <h3>Resolved</h3>
-                    <h1>0</h1>
+                    <h1 className='font-semibold text-5xl'>0</h1>
                 </div>
             </div>
         </div>

@@ -5,13 +5,17 @@ import Navbar from './component/Navbar/Navbar'
 import Banner from './component/Banner/Banner'
 import CustomerTicket from './component/CustomerTicket/CustomerTicket'
 
-
+const fechTickects = async () => {
+  const res = await fetch('./Tickects.json')
+  return res.json();
+}
+const tickectPromise = fechTickects()
 function App() {
   return (
     <>
     <Navbar></Navbar>
     <Banner></Banner>
-    <CustomerTicket></CustomerTicket>
+    <CustomerTicket tickectPromise={tickectPromise}></CustomerTicket>
       <ToastContainer />
     </>
   )
