@@ -4,6 +4,7 @@ import 'react-toastify/dist/ReactToastify.css'
 import Navbar from './component/Navbar/Navbar'
 import Banner from './component/Banner/Banner'
 import CustomerTicket from './component/CustomerTicket/CustomerTicket'
+import { Suspense } from 'react'
 
 const fechTickects = async () => {
   const res = await fetch('./Tickects.json')
@@ -11,12 +12,20 @@ const fechTickects = async () => {
 }
 const tickectPromise = fechTickects()
 function App() {
+
   return (
     <>
     <Navbar></Navbar>
     <Banner></Banner>
-    <CustomerTicket tickectPromise={tickectPromise}></CustomerTicket>
-      <ToastContainer />
+    <Suspense fallback={<div className="flex items-center justify-center pt-6">
+            <span className="loading loading-spinner text-info"></span>
+          </div>
+          }>
+<CustomerTicket  tickectPromise={tickectPromise}></CustomerTicket>
+    </Suspense>
+    
+      
+      <ToastContainer /> 
     </>
   )
 }
