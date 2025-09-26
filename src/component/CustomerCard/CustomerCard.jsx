@@ -4,17 +4,18 @@ import yellowCircleImg from '../../assets/circle-yellow.png'
 import calenderImg from '../../assets/calendar-line.png'
 import { toast } from 'react-toastify';
 
-const CustomerCard = ({ ticket }) => {
+const CustomerCard = ({ ticket,setSelectedTicket,selectedTicket }) => {
     const [toggle,settoggle] = useState(false)
     const handleOpen = ()=>{
     toast("In-Progress")
     settoggle(!toggle)
+    setSelectedTicket([...selectedTicket,ticket])
     }
     return (
         <>
             <div onClick={handleOpen}
                
-             className='hover:cursor-pointer mt-2 p-3 md:w-[360px] md:h-[200px]  bg-white shadow-sm rounded-2xl'>
+             className='hover:cursor-pointer mt-2 p-3 md:w-[400px] md:h-[200px]  bg-white shadow-sm rounded-2xl'>
                 <div className='flex justify-between items-center mb-2 roun'>
                     <h1 className='font-medium'>{ticket.title}</h1>
                     {

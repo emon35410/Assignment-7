@@ -1,11 +1,13 @@
-import React, { use } from 'react';
+import React, { use, useState } from 'react';
 
 import CustomerCard from '../CustomerCard/CustomerCard';
 import TaskStatus from '../TaskStatus/TaskStatus';
 
 
-const CustomerTicket = ({ tickectPromise }) => {
+const CustomerTicket = ({ tickectPromise,selectedTicket,setSelectedTicket }) => {
     const Ticket = use(tickectPromise)
+   
+   
     return (
         <div className='md:mx-[110px] mt-20'>
             <h1 className='font-semibold'>Customer Tickets</h1>
@@ -14,11 +16,11 @@ const CustomerTicket = ({ tickectPromise }) => {
 
                 <div className='grid grid-cols-1 md:grid-cols-2 gap-3 items-center'>
                     {
-                        Ticket.map((ticket) =><CustomerCard  ticket={ticket}></CustomerCard>)
+                        Ticket.map((ticket) =><CustomerCard key={ticket.id} selectedTicket={selectedTicket} setSelectedTicket={setSelectedTicket}   ticket={ticket}></CustomerCard>)
                     }
 
                 </div>
-                 <TaskStatus Ticket={Ticket}></TaskStatus>
+                 <TaskStatus Ticket={Ticket} selectedTicket={selectedTicket} ></TaskStatus>
             </div>
            
         </div>

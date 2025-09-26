@@ -4,7 +4,7 @@ import 'react-toastify/dist/ReactToastify.css'
 import Navbar from './component/Navbar/Navbar'
 import Banner from './component/Banner/Banner'
 import CustomerTicket from './component/CustomerTicket/CustomerTicket'
-import { Suspense } from 'react'
+import { Suspense, useState } from 'react'
 
 const fechTickects = async () => {
   const res = await fetch('./Tickects.json')
@@ -12,16 +12,19 @@ const fechTickects = async () => {
 }
 const tickectPromise = fechTickects()
 function App() {
+   const [selectedTicket, setSelectedTicket]= useState([])
+   
+  // const [inProgress, setinProgress] = useState(0)
 
   return (
     <>
-    <Navbar></Navbar>
-    <Banner></Banner>
+    <Navbar ></Navbar>
+    <Banner setSelectedTicket={setSelectedTicket}></Banner>
     <Suspense fallback={<div className="flex items-center justify-center pt-6">
             <span className="loading loading-spinner text-info"></span>
           </div>
           }>
-<CustomerTicket  tickectPromise={tickectPromise}></CustomerTicket>
+<CustomerTicket selectedTicket={selectedTicket} setSelectedTicket={setSelectedTicket}  tickectPromise={tickectPromise}></CustomerTicket>
     </Suspense>
     
       
