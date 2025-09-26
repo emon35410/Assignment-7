@@ -1,6 +1,7 @@
 import React, { use } from 'react';
 
 import CustomerCard from '../CustomerCard/CustomerCard';
+import TaskStatus from '../TaskStatus/TaskStatus';
 
 const CustomerTicket = ({ tickectPromise }) => {
     const Ticket = use(tickectPromise)
@@ -18,9 +19,8 @@ const CustomerTicket = ({ tickectPromise }) => {
                     
 
                 </div>
-                <div className=''>
-                    <h1>task status</h1>
-                </div>
+                
+                <TaskStatus></TaskStatus>
 
 
             </div>

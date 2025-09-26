@@ -2,16 +2,17 @@ import React from 'react';
 import greenCircleImg from '../../assets/circle-green.png'
 import yellowCircleImg from '../../assets/circle-yellow.png'
 import calenderImg from '../../assets/calendar-line.png'
+import { toast } from 'react-toastify';
 
 const CustomerCard = ({ticket}) => {
     return (
-        <div className='mt-2 p-3 md:w-[430px] md:h-[160px]  bg-white shadow-sm rounded-2xl'>
+        <div onClick={()=>toast("In-Progress")} className='hover:cursor-pointer mt-2 p-3 md:w-[430px] md:h-[160px]  bg-white shadow-sm rounded-2xl'>
                         <div className='flex justify-between items-center mb-2 roun'>
                             <h1 className='font-medium'>{ticket.title}</h1>
-                            <div className={`font-medium flex items-center justify-center p-1 rounded-2xl gap-1 bg-green-300`}>
+                            <div className={`font-medium flex items-center justify-center p-1 rounded-2xl gap-1 ${ticket.priority==="High Priority"?" bg-green-300":ticket.priority==="Low Priority"?"bg-yellow-100":"bg-green-500"}`}>
 
-                                <img src={greenCircleImg} alt="" />
-                                <span>Open</span>
+                                <img src={ticket.priority==="High Priority"?greenCircleImg:yellowCircleImg } alt="" />
+                                <span>{ticket.priority==="Medium Priority"?'In- Progress':'Open'}</span>
                             </div>
                         </div>
                         <p className='mb-1 text-[#637E96]'>{ticket.description}</p>
