@@ -4,7 +4,7 @@ import CustomerCard from '../CustomerCard/CustomerCard';
 import TaskStatus from '../TaskStatus/TaskStatus';
 
 
-const CustomerTicket = ({ tickectPromise,selectedTicket,setSelectedTicket }) => {
+const CustomerTicket = ({ tickectPromise,selectedTicket,setSelectedTicket,selectedComplete,setSelectedComplete }) => {
     const Ticket = use(tickectPromise)
    
    
@@ -16,11 +16,11 @@ const CustomerTicket = ({ tickectPromise,selectedTicket,setSelectedTicket }) => 
 
                 <div className='grid grid-cols-1 md:grid-cols-2 gap-3 items-center'>
                     {
-                        Ticket.map((ticket) =><CustomerCard key={ticket.id} selectedTicket={selectedTicket} setSelectedTicket={setSelectedTicket}   ticket={ticket}></CustomerCard>)
+                        Ticket.map((ticket) =><CustomerCard key={ticket.id}  selectedTicket={selectedTicket} setSelectedTicket={setSelectedTicket}   ticket={ticket}></CustomerCard>)
                     }
 
                 </div>
-                 <TaskStatus Ticket={Ticket} selectedTicket={selectedTicket} ></TaskStatus>
+                 <TaskStatus selectedComplete={selectedComplete}  setSelectedComplete={setSelectedComplete}  Ticket={Ticket} selectedTicket={selectedTicket} ></TaskStatus>
             </div>
            
         </div>

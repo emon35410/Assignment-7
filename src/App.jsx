@@ -13,18 +13,20 @@ const fechTickects = async () => {
 const tickectPromise = fechTickects()
 function App() {
    const [selectedTicket, setSelectedTicket]= useState([])
+   const[selectedComplete, setSelectedComplete] =useState([])
+   
    
   // const [inProgress, setinProgress] = useState(0)
 
   return (
     <>
     <Navbar ></Navbar>
-    <Banner setSelectedTicket={setSelectedTicket}></Banner>
+    <Banner selectedComplete={selectedComplete} selectedTicket={selectedTicket} ></Banner>
     <Suspense fallback={<div className="flex items-center justify-center pt-6">
             <span className="loading loading-spinner text-info"></span>
           </div>
           }>
-<CustomerTicket selectedTicket={selectedTicket} setSelectedTicket={setSelectedTicket}  tickectPromise={tickectPromise}></CustomerTicket>
+<CustomerTicket  selectedComplete={selectedComplete} setSelectedComplete={setSelectedComplete}   selectedTicket={selectedTicket} setSelectedTicket={setSelectedTicket}  tickectPromise={tickectPromise}></CustomerTicket>
     </Suspense>
     
       
