@@ -1,16 +1,14 @@
-# React + Vite
+What is JSX, and why is it used?
+Answer: JSX is a syntax extension in React that lets you write HTML-like code inside JavaScript for creating UI components.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+What is the difference between State and Props?
+Answer:State is component-owned mutable data, while Props are read-only inputs passed from parent to child components.
 
-Currently, two official plugins are available:
+What is the useState hook, and how does it work?
+Answer: The useState hook allows functional components to store and update local state with a setter function.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+How can you share state between components in React?
+Answer: You can share state between components by lifting state up to a common parent or using context.
 
-## React Compiler
-
-The React Compiler is not enabled on this template. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+How is event handling done in React?
+Answer: In React, event handling is done using camelCase attributes and passing functions as event handlers.
