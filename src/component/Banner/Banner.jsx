@@ -15,7 +15,7 @@ const Banner = ({selectedTicket,selectedComplete}) => {
             >
                 <div className='flex flex-col justify-center items-center gap-1 text-white'>
                     <h3>In-Progress</h3>
-                    <h1 className='font-semibold text-5xl'>{selectedTicket.length}</h1>
+                    <h1 className='font-semibold text-5xl'>{Math.max(0, selectedTicket.length - selectedComplete.length)}</h1>
                 </div>
             </div>
             <div className=' w-full h-[150px] flex gap-1 justify-center items-center   md:w-[508px] md:h-[250px] rounded-lg '

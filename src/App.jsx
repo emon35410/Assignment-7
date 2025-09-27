@@ -14,9 +14,7 @@ const tickectPromise = fechTickects()
 function App() {
    const [selectedTicket, setSelectedTicket]= useState([])
    const[selectedComplete, setSelectedComplete] =useState([])
-   
-   
-  // const [inProgress, setinProgress] = useState(0)
+   const [solved,setSolved] = useState([])
 
   return (
     <>
@@ -26,7 +24,7 @@ function App() {
             <span className="loading loading-spinner text-info"></span>
           </div>
           }>
-<CustomerTicket  selectedComplete={selectedComplete} setSelectedComplete={setSelectedComplete}   selectedTicket={selectedTicket} setSelectedTicket={setSelectedTicket}  tickectPromise={tickectPromise}></CustomerTicket>
+<CustomerTicket  solved={solved}  setSolved={setSolved} selectedComplete={selectedComplete} setSelectedComplete={setSelectedComplete}   selectedTicket={selectedTicket} setSelectedTicket={setSelectedTicket}  tickectPromise={tickectPromise}></CustomerTicket>
     </Suspense>
     
       

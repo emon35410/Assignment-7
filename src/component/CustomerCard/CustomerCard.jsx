@@ -4,7 +4,7 @@ import yellowCircleImg from '../../assets/circle-yellow.png'
 import calenderImg from '../../assets/calendar-line.png'
 import { toast } from 'react-toastify';
 
-const CustomerCard = ({ ticket,setSelectedTicket,selectedTicket }) => {
+const CustomerCard = ({ ticket,setSelectedTicket,selectedTicket,solved, setSolved }) => {
     const [toggle,settoggle] = useState(false)
     const handleOpen = ()=>{
     toast("In-Progress")
