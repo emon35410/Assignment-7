@@ -23,8 +23,8 @@ const TaskStatus = ({selectedTicket,setSelectedTicket, selectedComplete,setSelec
                 <h1 className='font-semibold text-[#34485A] flex items-center'>Task Status</h1>
                 
                 {
-                    selectedTicket.map(select=>
-                    <div key={select.id} className=' bg-white shadow-sm p-4 rounded-b-lg mt-3 flex flex-col mb-4 md:w-[200px] md:h-[70] '>
+                    selectedTicket.map((select,index)=>
+                    <div key={index} className=' bg-white shadow-sm p-4 rounded-b-lg mt-3 flex flex-col mb-4 md:w-[200px] md:h-[70] '>
                     
                     <h1 className='mb-3 text-[#637E96]'>{select.title}</h1>
                     <button onClick={()=>{
