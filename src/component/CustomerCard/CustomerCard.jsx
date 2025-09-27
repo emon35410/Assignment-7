@@ -7,7 +7,7 @@ import { toast } from 'react-toastify';
 const CustomerCard = ({ ticket, setSelectedTicket, selectedTicket }) => {
     const [toggle, settoggle] = useState(false)
     const handleOpen = () => {
-        toast("In-Progress")
+        toast.success("In-Progress")
         settoggle(!toggle)
         setSelectedTicket([...selectedTicket, ticket])
     }

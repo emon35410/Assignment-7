@@ -8,8 +8,8 @@ import TaskStatus from '../TaskStatus/TaskStatus';
 const CustomerTicket = ({ solved, setSolved, tickectPromise, selectedTicket, setSelectedTicket, selectedComplete, setSelectedComplete }) => {
     const Ticket = use(tickectPromise)
     const visibleTickets = Ticket.filter(
-    ticket => !selectedComplete.some(done => done.id === ticket.id)
-  )
+        ticket => !selectedComplete.some(done => done.id === ticket.id)
+    )
     return (
         <div className='md:mx-[110px] mt-20'>
             <h1 className='font-semibold'>Customer Tickets</h1>
