@@ -13,24 +13,24 @@ const fechTickects = async () => {
 }
 const tickectPromise = fechTickects()
 function App() {
-   const [selectedTicket, setSelectedTicket]= useState([])
-   const[selectedComplete, setSelectedComplete] =useState([])
-   const [solved,setSolved] = useState([])
+  const [selectedTicket, setSelectedTicket] = useState([])
+  const [selectedComplete, setSelectedComplete] = useState([])
+  const [solved, setSolved] = useState([])
 
   return (
     <>
-    <Navbar ></Navbar>
-    <Banner setSelectedComplete={setSelectedComplete}  selectedComplete={selectedComplete} selectedTicket={selectedTicket} ></Banner>
-    <Suspense fallback={<div className="flex items-center justify-center pt-6">
-            <span className="loading loading-spinner text-info"></span>
-          </div>
-          }>
-<CustomerTicket  solved={solved}  setSolved={setSolved} selectedComplete={selectedComplete} setSelectedComplete={setSelectedComplete}   selectedTicket={selectedTicket} setSelectedTicket={setSelectedTicket}  tickectPromise={tickectPromise}></CustomerTicket>
-    </Suspense>
-    <Footer></Footer>
-    
-      
-      <ToastContainer /> 
+      <Navbar ></Navbar>
+      <Banner setSelectedComplete={setSelectedComplete} selectedComplete={selectedComplete} selectedTicket={selectedTicket} ></Banner>
+      <Suspense fallback={<div className="flex items-center justify-center pt-6">
+        <span className="loading loading-spinner text-info"></span>
+      </div>
+      }>
+        <CustomerTicket solved={solved} setSolved={setSolved} selectedComplete={selectedComplete} setSelectedComplete={setSelectedComplete} selectedTicket={selectedTicket} setSelectedTicket={setSelectedTicket} tickectPromise={tickectPromise}></CustomerTicket>
+      </Suspense>
+      <Footer></Footer>
+
+
+      <ToastContainer />
     </>
   )
 }
