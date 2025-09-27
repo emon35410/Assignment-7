@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { toast } from 'react-toastify';
 import CompleteTask from './CompleteTask';
 
-const TaskStatus = ({handleSolve, selectedTicket, setSelectedTicket, selectedComplete, setSelectedComplete, solved, setSolved }) => {
+const TaskStatus = ({ selectedTicket, setSelectedTicket, selectedComplete, setSelectedComplete, solved, setSolved }) => {
     console.log(selectedComplete)
     const [clickComplete, setclickComplete] = useState(false)
     const handleComplete = (Task) => {

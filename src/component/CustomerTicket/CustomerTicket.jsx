@@ -1,4 +1,4 @@
-import React, { use, useState } from 'react';
+import React, { use } from 'react';
 
 import CustomerCard from '../CustomerCard/CustomerCard';
 import TaskStatus from '../TaskStatus/TaskStatus';
