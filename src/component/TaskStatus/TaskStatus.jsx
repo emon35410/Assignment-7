@@ -17,7 +17,7 @@ const TaskStatus = ({ selectedTicket, setSelectedTicket, selectedComplete, setSe
     return (
         <div className=''>
 
-            <div className='mb-5 bg-white shadow-sm p-1 pl-0 pr-0 pb-0 rounded-t-sm'>
+            <div className=' bg-white shadow-sm p-1 pl-0 pr-0 mb-6 rounded-t-sm '>
                 <h1 className='font-semibold text-[#34485A] flex justify-center items-center'>Task Status</h1>
 
                 {
@@ -29,12 +29,12 @@ const TaskStatus = ({ selectedTicket, setSelectedTicket, selectedComplete, setSe
                                 handleComplete(select);
 
 
-                            }} className='mt-1 p-2 bg-green-600 text-white rounded-2xl hover:cursor-pointer'>Complete</button>
+                            }} className='mt-1  p-0.5 bg-green-600 text-white rounded-sm hover:cursor-pointer'>Complete</button>
                         </div>
                     )
                 }
             </div>
-            <div className='bg-white shadow-sm p-1 pl-0 pr-0 pb-0 rounded-sm'>
+            <div className='bg-white shadow-sm p-1 pl-0 pr-0 pb-0 rounded-sm '>
                 <h1 className='font-semibold text-[#34485A] flex justify-center items-center mb-3'>Resolved Task</h1>
                 {
                     selectedComplete.map(select => <CompleteTask key={select.id} select={select} solved={solved} setSolved={setSolved}></CompleteTask>)
